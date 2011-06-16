@@ -6,11 +6,11 @@ Getting Started with Wheels was modified from [Getting Started with Rails](http:
 
 [ColdFusion On Wheels](http://cfwheels.org) is a powerful web application framework that has become popular in the past few years. It is relatively easy to develop with and can be used for awesome sites like [AmtrakGuestRewards.com](http://AmtrakGuestRewards.com), or cool ones like [Meritbuilder.com](http://Meritbuilder.com) and [Singsnap.com](http://Singsnap.com).
 
-Getting Started with Rails
+Getting Started with Wheels
 
-This guide covers getting up and running with Ruby on Rails. After reading it, you should be familiar with:
+This guide covers getting up and running with ColdFusion on Wheels. After reading it, you should be familiar with:
 
-- Installing Rails, creating a new Rails application, and connecting your application to a database
+- Installing Wheels, creating a new Wheels application, and connecting your application to a database
 - The general layout of a Wheels application
 - The basic principles of MVC (Model, View Controller) and RESTful design
 - How to quickly generate the starting pieces of a Wheels application.
