@@ -35,7 +35,7 @@ You may also find incomplete content, or stuff that is not up to date. Please do
 
 Issues may also be reported in Github.
 
-And last but not least, any kind of discussion regarding Ruby on Rails documentation is very welcome in the CFWheels Google Group. 
+And last but not least, any kind of discussion regarding ColdFusion on Wheels documentation is very welcome in the CFWheels Google Group. 
 
 ## Contributors
 
