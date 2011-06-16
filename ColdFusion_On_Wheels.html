@@ -1,0 +1,1990 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<base target="_top">
+<style type="text/css">
+  
+
+
+/* default css */
+
+table {
+  font-size: 1em;
+  line-height: inherit;
+  border-collapse: collapse;
+}
+
+
+tr {
+  
+  text-align: left;
+  
+}
+
+
+div, address, ol, ul, li, option, select {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+
+pre {
+  font-family: Courier New;
+  white-space: pre-wrap;
+  margin:0;
+}
+
+body {
+  margin: 6px;
+  padding: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 10pt;
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+img {
+  -moz-force-broken-image-icon: 1;
+}
+
+@media screen {
+  html.pageview {
+    background-color: #f3f3f3 !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  
+
+  body {
+    min-height: 1100px;
+    
+    counter-reset: __goog_page__;
+  }
+  
+  * html body {
+    height: 1100px;
+  }
+  /* Prevent repaint errors when scrolling in Safari. This "Star-7" css hack
+     targets Safari 3.1, but not WebKit nightlies and presumably Safari 4.
+     That's OK because this bug is fixed in WebKit nightlies/Safari 4 :-). */
+  html*#wys_frame::before {
+    content: '\A0';
+    position: fixed;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .pageview body {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 2px solid #bbb;
+    border-bottom: 2px solid #bbb;
+    width: 648px !important;
+    margin: 15px auto 25px;
+    padding: 40px 50px;
+  }
+  /* IE6 */
+  * html {
+    overflow-y: scroll;
+  }
+  * html.pageview body {
+    overflow-x: auto;
+  }
+  
+
+  
+    
+    .writely-callout-data {
+      display: none;
+    }
+    
+
+    .writely-footnote-marker {
+      background-image: url('MISSING');
+      background-color: transparent;
+      background-repeat: no-repeat;
+      width: 7px;
+      overflow: hidden;
+      height: 16px;
+      vertical-align: top;
+
+      
+      -moz-user-select: none;
+    }
+    .editor .writely-footnote-marker {
+      cursor: move;
+    }
+    .writely-footnote-marker-highlight {
+      background-position: -15px 0;
+      -moz-user-select: text;
+    }
+    .writely-footnote-hide-selection ::-moz-selection, .writely-footnote-hide-selection::-moz-selection {
+      background: transparent;
+    }
+    .writely-footnote-hide-selection ::selection, .writely-footnote-hide-selection::selection {
+      background: transparent;
+    }
+    .writely-footnote-hide-selection {
+      cursor: move;
+    }
+
+    /* Comments */
+    .writely-comment-yellow {
+      background-color: #ffffd7;
+    }
+    .writely-comment-orange {
+      background-color: #ffe3c0;
+    }
+    .writely-comment-pink {
+      background-color: #ffd7ff;
+    }
+    .writely-comment-green {
+      background-color: #d7ffd7;
+    }
+    .writely-comment-blue {
+      background-color: #d7ffff;
+    }
+    .writely-comment-purple {
+      background-color: #eed7ff;
+    }
+
+  
+
+
+  
+  .br_fix span+br:not(:-moz-last-node) {
+    
+    position:relative;
+    
+    left: -1ex
+    
+  }
+
+  
+  #cb-p-tgt {
+    font-size: 8pt;
+    padding: .4em;
+    background-color: #ddd;
+    color: #333;
+  }
+  #cb-p-tgt-can {
+    text-decoration: underline;
+    color: #36c;
+    font-weight: bold;
+    margin-left: 2em;
+  }
+  #cb-p-tgt .spin {
+    width: 16px;
+    height: 16px;
+    background: url(//ssl.gstatic.com/docs/clipboard/spin_16o.gif) no-repeat;
+  }
+}
+
+h6 { font-size: 8pt }
+h5 { font-size: 8pt }
+h4 { font-size: 10pt }
+h3 { font-size: 12pt }
+h2 { font-size: 14pt }
+h1 { font-size: 18pt }
+
+blockquote {padding: 10px; border: 1px #DDD dashed }
+
+.webkit-indent-blockquote { border: none; }
+
+a img {border: 0}
+
+.pb {
+  border-width: 0;
+  page-break-after: always;
+  /* We don't want this to be resizeable, so enforce a width and height
+     using !important */
+  height: 1px !important;
+  width: 100% !important;
+}
+
+.editor .pb {
+  border-top: 1px dashed #C0C0C0;
+  border-bottom: 1px dashed #C0C0C0;
+}
+
+div.google_header, div.google_footer {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+/* Table of contents */
+.editor div.writely-toc {
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+}
+.writely-toc > ol {
+  padding-left: 3em;
+  font-weight: bold;
+}
+ol.writely-toc-subheading {
+  padding-left: 1em;
+  font-weight: normal;
+}
+/* IE6 only */
+* html writely-toc ol {
+  list-style-position: inside;
+}
+.writely-toc-none {
+  list-style-type: none;
+}
+.writely-toc-decimal {
+  list-style-type: decimal;
+}
+.writely-toc-upper-alpha {
+  list-style-type: upper-alpha;
+}
+.writely-toc-lower-alpha {
+  list-style-type: lower-alpha;
+}
+.writely-toc-upper-roman {
+  list-style-type: upper-roman;
+}
+.writely-toc-lower-roman {
+  list-style-type: lower-roman;
+}
+.writely-toc-disc {
+  list-style-type: disc;
+}
+
+/* Ordered lists converted to numbered lists can preserve ordered types, and
+   vice versa. This is confusing, so disallow it */
+ul[type="i"], ul[type="I"], ul[type="1"], ul[type="a"], ul[type="A"] {
+  list-style-type: disc;
+}
+
+ol[type="disc"], ol[type="circle"], ol[type="square"] {
+  list-style-type: decimal;
+}
+
+/* end default css */
+
+
+  /* default print css */
+  @media print {
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    div.google_header, div.google_footer {
+      display: block;
+      min-height: 0;
+      border: none;
+    }
+
+    div.google_header {
+      flow: static(header);
+    }
+
+    /* used to insert page numbers */
+    div.google_header::before, div.google_footer::before {
+      position: absolute;
+      top: 0;
+    }
+
+    div.google_footer {
+      flow: static(footer);
+    }
+
+    /* always consider this element at the start of the doc */
+    div#google_footer {
+      flow: static(footer, start);
+    }
+
+    span.google_pagenumber {
+      content: counter(page);
+    }
+
+    span.google_pagecount {
+      content: counter(pages);
+    }
+
+    .endnotes {
+      page: endnote;
+    }
+
+    /* MLA specifies that endnotes title should be 1" margin from the top of the page. */
+    @page endnote {
+      margin-top: 1in;
+    }
+
+    callout.google_footnote {
+      
+      display: prince-footnote;
+      footnote-style-position: inside;
+      /* These styles keep the footnote from taking on the style of the text
+         surrounding the footnote marker. They can be overridden in the
+         document CSS. */
+      color: #000;
+      font-family: Verdana;
+      font-size: 10.0pt;
+      font-weight: normal;
+    }
+
+    /* Table of contents */
+    #WritelyTableOfContents a::after {
+      content: leader('.') target-counter(attr(href), page);
+    }
+
+    #WritelyTableOfContents a {
+      text-decoration: none;
+      color: black;
+    }
+
+    /* Comments */
+    .writely-comment-yellow {
+      background-color: #ffffd7;
+    }
+    .writely-comment-orange {
+      background-color: #ffe3c0;
+    }
+    .writely-comment-pink {
+      background-color: #ffd7ff;
+    }
+    .writely-comment-green {
+      background-color: #d7ffd7;
+    }
+    .writely-comment-blue {
+      background-color: #d7ffff;
+    }
+    .writely-comment-purple {
+      background-color: #eed7ff;
+    }
+  }
+
+  @page {
+    @top {
+      content: flow(header);
+    }
+    @bottom {
+      content: flow(footer);
+    }
+    @footnotes {
+      border-top: solid black thin;
+      padding-top: 8pt;
+    }
+  }
+  /* end default print css */
+
+
+/* custom css */
+
+
+/* end custom css */
+
+/* ui edited css */
+
+body {
+  font-family: Verdana;
+  
+  font-size: 10.0pt;
+  line-height: normal;
+  background-color: #ffffff;
+}
+/* end ui edited css */
+
+
+/* editor CSS */
+.editor a:visited {color: #551A8B}
+.editor table.zeroBorder {border: 1px dotted gray}
+.editor table.zeroBorder td {border: 1px dotted gray}
+.editor table.zeroBorder th {border: 1px dotted gray}
+
+
+.editor div.google_header, .editor div.google_footer {
+  border: 2px #DDDDDD dashed;
+  position: static;
+  width: 100%;
+  min-height: 2em;
+}
+
+.editor .misspell {background-color: yellow}
+
+.editor .writely-comment {
+  font-size: 9pt;
+  line-height: 1.4;
+  padding: 1px;
+  border: 1px dashed #C0C0C0
+}
+
+
+/* end editor CSS */
+
+</style>
+
+  
+  <title>ColdFusion On Wheels - FAQU</title>
+
+</head>
+
+<body 
+    
+    >
+    
+    
+    
+<div class=writely-toc id=WritelyTableOfContents toctype=none+none>
+  <ol class=writely-toc-none>
+    <li>
+      <a href=#Wheels_Getting_Started_4797849_912803920387941 target=_self>Wheels Getting Started</a>
+    </li>
+    <ol class="writely-toc-none writely-toc-subheading" style=MARGIN-LEFT:0pt>
+      <li>
+        <a href=#What_is_Wheels_016261891694739_4754775799773895 target=_self>What is Wheels?</a>
+      </li>
+      <ol class="writely-toc-none writely-toc-subheading" style=MARGIN-LEFT:0pt>
+        <li>
+          <a href=#Wheels_Philosophies_8687247922 target=_self>Wheels Philosophies</a>
+        </li>
+        <ol class="writely-toc-none writely-toc-subheading" style=MARGIN-LEFT:0pt>
+          <li>
+            <a href=#Simplicity_6289652113580401_56_6728275462344698 target=_self>Simplicity</a>
+          </li>
+          <ol class="writely-toc-none writely-toc-subheading" style=MARGIN-LEFT:0pt>
+            <li>
+              <a href=#Full_Stack_8942067138850689_29_46499218906757656 target=_self>Full Stack</a>
+            </li>
+            <li>
+              <a href=#Object_Relational_Mapping_9254 target=_self>Object Relational Mapping</a>
+            </li>
+          </ol>
+          <li>
+            <a href=#Convention_Over_Configuration_ target=_self>Convention Over Configuration</a>
+          </li>
+          <li>
+            <a href=#Model_View_Controller_85405516_06356842670605278 target=_self>Model-View-Controller</a>
+          </li>
+          <ol class="writely-toc-none writely-toc-subheading" style=MARGIN-LEFT:0pt>
+            <li>
+              <a href=#Model_12362525472417474_549519 target=_self>Model</a>
+            </li>
+            <li>
+              <a href=#View_5790057617705315_72554119 target=_self>View</a>
+            </li>
+            <li>
+              <a href=#Controller_4727350554894656_09 target=_self>Controller</a>
+            </li>
+          </ol>
+        </ol>
+      </ol>
+      <li>
+        <a href=#Creating_a_Wheels_application_ target=_self>Creating a Wheels Application</a>
+      </li>
+      <ol class="writely-toc-none writely-toc-subheading" style=MARGIN-LEFT:0pt>
+        <li>
+          <a href=#Wheels_Requirements_7242822716 target=_self>Wheels Requirements</a>
+        </li>
+        <li>
+          <a href=#Wheels_Installation_0038780069_11180029226457933 target=_self>Wheels Installation</a>
+        </li>
+        <li>
+          <a href=#Hello_Wheels_6164005508180708_ target=_self>Hello Wheels</a>
+        </li>
+        <li>
+          <a href=#Configuring_a_Databasae_001356_2905229620096399 target=_self>Connecting a Database</a>
+        </li>
+        <li>
+          <a href=#Getting_Up_and_Running_Quickly_43252594041429915 target=_self>Getting Up and Running Quickly With scaffolding</a>
+        </li>
+        <ol class="writely-toc-none writely-toc-subheading" style=MARGIN-LEFT:0pt>
+          <li>
+            <a href=#Creating_the_Model_View_and_Co target=_self>Creating the Model, View, and Controller</a>
+          </li>
+        </ol>
+        <li>
+          <a href=#WHEELS_SUBTITLE_58399387449026 target=_self>Wheels Concepts</a>
+        </li>
+        <ol class="writely-toc-none writely-toc-subheading" style=MARGIN-LEFT:0pt>
+          <li>
+            <a href=#Routes_28136930568143725_73973_7329824295475087 target=_self>Routes</a>
+          </li>
+          <li>
+            <a href=#Incoming_Request_5827125869691 target=_self>Incoming Request</a>
+          </li>
+          <li>
+            <a href=#URL_Convention_587182150222361_326229192530205 target=_self>URL Convention</a>
+          </li>
+          <li>
+            <a href=#Params_URL_Convention_53485761_7182909652480026 target=_self>Params</a>
+          </li>
+          <li>
+            <a href=#Wheels_Form_Helpers_6161805656 target=_self>Wheels Form Helpers</a>
+          </li>
+          <li>
+            <a href=#Wheels_Flash_8689652008470148_ target=_self>Wheels Flash</a>
+          </li>
+          <li>
+            <a href=#Using_set_38284409581683576_55_3849435847678804 target=_self>Using set()</a>
+          </li>
+        </ol>
+        <li>
+          <a href=#Setting_the_Application_Home_P_6355197688306142 target=_self>Setting the Application Home Page</a>
+        </li>
+        <li>
+          <a href=#Working_With_Entries_191594275_9379566920449067 target=_self>Creating Entries</a>
+        </li>
+      </ol>
+      <li>
+        <a href=#Play_By_Play_for_Wheels_Code_3_017431705370974937 target=_self>Reviewing Generated Code</a>
+      </li>
+      <ol class="writely-toc-none writely-toc-subheading" style=MARGIN-LEFT:0pt>
+        <li>
+          <a href=#Listing_entries_58774731680750_15753370997097627 target=_self>Listing entries</a>
+        </li>
+        <li>
+          <a href=#Creating_New_Posts_81152781867 target=_self>Creating New Entry</a>
+        </li>
+        <ol class="writely-toc-none writely-toc-subheading" style=MARGIN-LEFT:0pt>
+          <li>
+            <a href=#Part_1_Display_Form_1465236919_11162092885644037 target=_self>Action One, Display New page</a>
+          </li>
+          <li>
+            <a href=#Part_2_Submit_Form_98523423983_36874440645376305 target=_self>Action Two, Create New Entry</a>
+          </li>
+        </ol>
+        <li>
+          <a href=#Showing_an_Individual_Entry_07 target=_self>Showing an Individual Entry</a>
+        </li>
+        <li>
+          <a href=#Editing_a_Post_029729640111327 target=_self>Editing an Entry</a>
+        </li>
+        <li>
+          <a href=#Deleting_a_Post_23675539135001 target=_self>Deleting an Entry</a>
+        </li>
+      </ol>
+      <li>
+        <a href=#Working_with_Wheels_1342179297_6103607928980188 target=_self>Working with Wheels Code</a>
+      </li>
+      <ol class="writely-toc-none writely-toc-subheading" style=MARGIN-LEFT:0pt>
+        <li>
+          <a href=#Wheels_Debugging_Section_86423_7353686704696855 target=_self>Wheels Debugging Section</a>
+        </li>
+        <li>
+          <a href=#Adding_a_Link_1004657729063183 target=_self>Adding a Link</a>
+        </li>
+        <li>
+          <a href=#Styling_and_Customizing_116763_8043865712318992 target=_self>Customizing our Application</a>
+        </li>
+        <ol class="writely-toc-none writely-toc-subheading" style=MARGIN-LEFT:0pt>
+          <li>
+            <a href=#Layouts_9062361370306462_39814 target=_self>Layouts</a>
+          </li>
+          <li>
+            <a href=#Styling_Forms_3027832652442157 target=_self>Styling Forms</a>
+          </li>
+        </ol>
+        <li>
+          <a href=#The_Model_372594105778262_7448 target=_self>The Model</a>
+        </li>
+        <ol class="writely-toc-none writely-toc-subheading" style=MARGIN-LEFT:0pt>
+          <li>
+            <a href=#Adding_Some_Validation_6270772_9214044988066312 target=_self>Adding Some Validation</a>
+          </li>
+          <li>
+            <a href=#Model_Class_Functions_58876017_7709790087435751 target=_self>Model Class Functions</a>
+          </li>
+        </ol>
+        <li>
+          <a href=#Wheels_Flash_43804320227354765_9030799588247966 target=_self>NOT SURE WHATS</a>
+        </li>
+      </ol>
+      <li>
+        <a href=#What_s_Next_7453313174191862_9_7832523854673071 target=_self>What's Next?</a>
+      </li>
+      <li>
+        <a href=#License_and_Acknowledgments_70 target=_self>License and Acknowledgments</a>
+      </li>
+    </ol>
+  </ol>
+</div>
+<h1>
+  <a id=Wheels_Getting_Started_4797849_912803920387941 name=Wheels_Getting_Started_4797849_912803920387941></a><b><b><b><font size=5><b><b><font size=5>Wheels&nbsp;</font>Getting Started</b></b></font></b></b></b>
+</h1>
+<div>
+  <i style=COLOR:#ff9900>TODO: add about var scoping - http://groups.google.com/group/cfwheels/browse_thread/thread/4b72e10b53507fc0/dc89453f1c3e2622?lnk=gst&amp;q=var+scoping#dc89453f1c3e2622</i><br>
+  <br>
+  <br>
+  <br>
+  . -Mike Henke 3/1/11 11:39 AM<br>
+  <br>
+  ease them in; this why; describe; introduce each section; flow; builds unto each other;<br>
+  <br>
+  article in miniture; excite them; stay away from dry;<br>
+  </span><br>
+   <br>
+  In this article Mike Henke will discuss ColdFusion On Wheels (Wheels). Wheels is a ColdFusion framework inspired by Ruby On Rails. Wheels is simple to use with the convention over configuration aspect. <font style=BACKGROUND-COLOR:#ffff00>Wheels doesn't turn using a ColdFusion framework into something different then how you originally learned to code CFML.</font> It is the only framework with an integrated Object Relational Mapper to make interacting with your database even simpler.
+</div>
+<br>
+<div>
+  This article will be divided into four sections. The first section, "What is Wheels?", &nbsp;is an introduction into Wheels philosophies like simpilicty and convention over configuration. The second section, "Creating a Wheels application", will show how to get up and running with Wheels. We will also generate a simple application with a scaffolding plugin. The third section, "Reviewing Generated Code", will walk through the generated code. The fourth section, "Working with Wheels", will customizing our application and add some functionality.
+</div>
+<h2>
+  <a id=What_is_Wheels_016261891694739_4754775799773895 name=What_is_Wheels_016261891694739_4754775799773895></a><b><b><b>What is Wheels?</b></b></b>
+</h2>
+Wheels is a ColdFusion framework using object oriented processes while not forcing you to know oo. It does this by guiding you into writing more maintainable and reusable code.&nbsp;<font size=2>Wheels is not a direct port of&nbsp;</font><font style=BACKGROUND-COLOR:#ffffff>Ruby on Rails (RoR)</font><font size=2>.&nbsp;</font><br>
+<h3>
+  <a id=Wheels_Philosophies_8687247922 name=Wheels_Philosophies_8687247922></a>Wheels Philosophies
+</h3>
+<div>
+  Wheels philosophies include:
+</div>
+<br>
+<ul>
+  <li>
+    Simplicity<br>
+  </li>
+  <ul>
+    <li>
+      Full Stack
+    </li>
+    <li>
+      Object Relational Mapping
+    </li>
+  </ul>
+  <li>
+    Convention Over Configuration
+  </li>
+  <li>
+    Model-View-Controller
+  </li>
+  <li>
+    Object Relational Mapping
+  </li>
+</ul>
+<h4>
+  <a id=Simplicity_6289652113580401_56_6728275462344698 name=Simplicity_6289652113580401_56_6728275462344698></a><font size=2>Simplicity</font>
+</h4>
+<div>
+  <font size=2>The simplicity of Wheels is a major reason I have become a fan. The simplicity derives <font size=2>from convention over configuration. You follow the conventions and you are golden. If you need to override a convention, you can. The model objects have no getters or setters, another simplicity feature. The properties are attached to the object in the THIS scope. To get a column you <font style=BACKGROUND-COLOR:#ffffff>would use&nbsp;</font>#myModelObject.myColumn<font size=2>#</font>. There are no XML configuration files which keeps Wheels simple. One simplicity feature is Wheels is one cohesive solution called a "Full Stack" framework.</font></font>
+</div>
+<h5>
+  <a id=Full_Stack_8942067138850689_29_46499218906757656 name=Full_Stack_8942067138850689_29_46499218906757656></a>Full Stack
+</h5>
+<div>
+  &nbsp;<font size=2>&nbsp;"Full stack" incorporates multiple features for developers into one cohesive, fully functional solution.&nbsp;</font><font style=BACKGROUND-COLOR:#ffffff><font size=2>Per Djumner http://cfwheels.org/user/profile/2, former lead developer for Wheels, describes this as Wheels is "meant to be used without needing any other frameworks. Compared with other ColdFusion frameworks where it's more expected the developer will use some other framework" like Transfer for Object Relation Mapping and ColdSpring for Inversion of control (IoC).&nbsp;</font></font><font size=2>Wheels "full stack" includes validation, caching, and an Object Relational Mapping solution.&nbsp;</font>
+</div>
+<h5>
+  <a id=Object_Relational_Mapping_9254 name=Object_Relational_Mapping_9254></a>Object Relational Mapping
+</h5>
+<div>
+  <font size=2>The Object Relational Mapping (ORM) in Wheels will reduce the need to create repetitive, basic SQL statements.&nbsp;<font size=2>Wheels implements the Active Record design pattern to accomplish this. One detail of Active Record is the database defines your model objects. Your&nbsp;<font size=2>model object will have classes to interact with the data.</font>&nbsp;<font size=2><font style=BACKGROUND-COLOR:#ffff00>With Active Record, encapsulation occurs by hiding the SQL statement but not the data structure.</font></font></font></font>
+</div>
+<font size=2><br>
+You may have heard a lot about ORMs recently with Adobe ColdFusion 9 integrating Hibernate.&nbsp;<font size=2><font style=BACKGROUND-COLOR:#ffffff>The problem an ORM is trying to solve is converting two&nbsp;</font><font size=2><font style=BACKGROUND-COLOR:#ffffff>incompatible data types: your&nbsp;</font></font><font style=BACKGROUND-COLOR:#ffffff>relational database and object-oriented code. Think of squares trying to fit into circles. The ORM solves this problem.</font></font><font size=2>&nbsp;Hibernate takes a slightly different approach from Wheels. Hiberate uses the Data Mapper&nbsp;</font><font size=2>design p</font><font size=2>attern.&nbsp;<font size=2>For more information on different approaches to access data, readAdobe ColdFusion Anthology Chapter 21 "Beans and DAOs and Gateways, Oh My!" by Sean Corfield.</font></font><br>
+</font>
+<h4>
+  <a id=Convention_Over_Configuration_ name=Convention_Over_Configuration_></a>Convention Over Configuration
+</h4>
+<div>
+  Sensible defaults are important to Wheels. I use sensible defaults and convention over configuration (CoC) interchangeably. CoC is a software design idea. Co<font style=BACKGROUND-COLOR:#ffffff>C</font> allows the developer to focus on coding instead of worrying about <font face="verdana, arial, helvetica, sans-serif">for m<font face="verdana, arial, helvetica, sans-serif">apping between a functions, a databases and <span class=caps>URL</span>&nbsp;requests</font>.&nbsp;</font>&nbsp;The developer only needs to configure the extraordinary, not the ordinary. CoC decreases the number of decisions, while increasing simplicity and maintaining flexibility.&nbsp;
+</div>
+<br>
+<div>
+  I describe CoC with this story. In the mornings, I have a bacon, egg, and cheese croissant sandwich with a coffee. I walk into the cafe and when the cook sees me, we nod at each other. I grab my coffee and at the cash register, my sandwich is waiting for me. We are using CoC. The cook assumes I want my ordinary order, if I wanted something extraordinary I would have to say so. Some conventions are based on how Wheels is orgainized using the&nbsp;<font size=2>Model-View-Controller (MVC) architecture.</font>
+</div>
+<h4>
+  <a id=Model_View_Controller_85405516_06356842670605278 name=Model_View_Controller_85405516_06356842670605278></a>Model-View-Controller
+</h4>
+<div>
+  <font size=2>MVC architecture purpose is organizing your code and promoting simplicity. It should be clear where different types of code belong. In Wheels, the file and folder structure should be very intuitive. Models go in the models folder, Views go in the views folder and so on. Another goal of MVC is promoting DRY (Don't Repeat Yourself) code.</font>
+</div>
+<font size=2><br>
+</font>
+<div>
+  <font size=2>Here is a simple explanation for each piece of MVC. </font>
+</div>
+<h5>
+  <a id=Model_12362525472417474_549519 name=Model_12362525472417474_549519></a>Model
+</h5>
+<div>
+  The model is the data. In Wheels, a CFC in the models folder represents a table in your database.<font size=2><br>
+  </font>
+</div>
+<h5>
+  <a id=View_5790057617705315_72554119 name=View_5790057617705315_72554119></a>View
+</h5>
+<div>
+  The view is what is presented to the user. It could be HTML, XML, JSON, or other forms of content. In Wheels, the views will be a cfm file.
+</div>
+<h5>
+  <a id=Controller_4727350554894656_09 name=Controller_4727350554894656_09></a>Controller
+</h5>
+<div>
+  The controller is the brains of your Wheels application. It tells the application what to get, what to do with it, and how to give it to the user. In Wheels, the controller will be a CFC located in the controllers folder.
+</div>
+<br>
+As you read, Wheels borrows philosophies from RoR and implements them in ColdFusion friendly, simple ways. Wheels coding and flow should not be much different then when you first learned CFML from Ben Forta's books. Wheels will guides you to better, more maintainable code. Let's create a Wheels applications.<br>
+<h2>
+  <a id=Creating_a_Wheels_application_ name=Creating_a_Wheels_application_></a>Creating a Wheels Application
+</h2>
+<div>
+  Creating a Wheels application is simple. This section will cover requirements, installation, connecting a database, and generating code for a starting point.
+</div>
+<h3>
+  <a id=Wheels_Requirements_7242822716 name=Wheels_Requirements_7242822716></a>Wheels Requirements
+</h3>
+<div>
+  <font size=2>Wheels runs on Adobe ColdFusion 8.01/9 and Railo 3.1.2.020. The ORM requires SQL Server 7, Oracle 10g, PostgreSQL, H2,&nbsp;<font style=BACKGROUND-COLOR:#ffffff>or&nbsp;</font>MySQL 5. Additionally, it supports more recent versions of these database management systems.</font>
+</div>
+<h3>
+  <a id=Wheels_Installation_0038780069_11180029226457933 name=Wheels_Installation_0038780069_11180029226457933></a>Wheels Installation
+</h3>
+<div>
+  Download the most recent Wheels release at http://cfwheels.org/download. Next unzip into your web root.<br>
+  <br>
+  <div>
+    <font size=2>Here are some important folders you should see in your web root. </font>
+  </div>
+  <br>
+  <table border=1 bordercolor=#000000 cellpadding=3 cellspacing=0 id=m7ni width=100%>
+    <tbody>
+    <tr style=TEXT-ALIGN:left>
+      <td width=50%>
+        <font size=2><b>Folder</b></font>
+      </td>
+      <td width=50%>
+        <font size=2><b>Purpose</b></font>
+      </td>
+    </tr>
+    <tr style=TEXT-ALIGN:left>
+      <td width=50%>
+        <font size=2>config</font>
+      </td>
+      <td width=50%>
+        Make all your configuration changes here*
+      </td>
+    </tr>
+    <tr style=TEXT-ALIGN:left>
+      <td width=50%>
+        <font size=2>controllers</font>
+      </td>
+      <td width=50%>
+        Where your CFC controllers go
+      </td>
+    </tr>
+    <tr style=TEXT-ALIGN:left>
+      <td width=50%>
+        <font size=2>models</font>
+      </td>
+      <td width=50%>
+        Where your CFC models go<br>
+      </td>
+    </tr>
+    <tr style=TEXT-ALIGN:left>
+      <td width=50%>
+        <font size=2>plugins</font>
+      </td>
+      <td width=50%>
+        Where any plugin zip files will go
+      </td>
+    </tr>
+    <tr style=TEXT-ALIGN:left>
+      <td width=50%>
+        <font size=2>views</font>
+      </td>
+      <td width=50%>
+        Your cfm views go inside a sub-folder matching the controller name
+      </td>
+    </tr>
+    <tr style=TEXT-ALIGN:left>
+      <td width=50%>
+        <font size=2>wheels</font>
+      </td>
+      <td width=50%>
+        The framework
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <br>
+  *The config folder may seem out of place with Wheels emphasis on convention over configuration. "Configuration files are still important for the cases where convention fails." from <font size=2>http://softwareengineering.vazexqi.com/files/pattern.html</font>&nbsp;In other words, Wheels can assume conventions but if you need to change them to something extraordinary you can in the config folder.<br>
+  <br>
+  <div>
+    Wheels has several other options to get started besides the process shown above.&nbsp;
+  </div>
+  <br>
+  <ul>
+    <li>
+      Fusegrid provides an unzip and go build with Wheels, Railo, Jetty, and SQLite http://github.com/Fusegrid/fusegrid-sdk&nbsp;
+    </li>
+  </ul>
+  <br>
+  <ul>
+    <li>
+      Alurium Hosting has a free 15 day trial account. The account will come with Railo, MySQL, and Wheels. http://alurium.com
+    </li>
+  </ul>
+  <br>
+  <ul>
+    <li>
+      MARC has MySQL, Apache, Railo, and ColdFusion on Wheels with CFEclipse and other tools. Fire it up with VirtualBox and you can start coding. http://www.henke.ws/page.cfm/cfwheels/downloads
+    </li>
+  </ul>
+  <h3>
+    <a id=Hello_Wheels_6164005508180708_ name=Hello_Wheels_6164005508180708_></a>Hello Wheels
+  </h3>
+  <div>
+    To test our installation, lets load the site. For me, it was http://localhost/. It is that simple. Next section we will connect a database connection.
+  </div>
+  <div id=k703 style=TEXT-ALIGN:left>
+    <a href=http://docs.google.com/File?id=dc2sb454_512d3nhr2c2_b target=_blank><img src="images/dc2sb454_512d3nhr2c2_b.jpg" style=HEIGHT:400px;WIDTH:640px></a>
+  </div>
+  <h3>
+    <a id=Configuring_a_Databasae_001356_2905229620096399 name=Configuring_a_Databasae_001356_2905229620096399></a><font size=3>Connecting a Database</font>
+  </h3>
+  <div>
+    Please create a database and run the SQL script from <font size=2>https://github.com/mhenke/LitePostWheels/blob/master/files/litePostDB_data.sql&nbsp;</font>. This file is MySQL specific so you may have to modify it for your database system. Next create a ColdFusion datasource called litepost in the ColdFusion administration for our Wheels application.
+  </div>
+  <br>
+  <div>
+    <font style=BACKGROUND-COLOR:#ffffff>Wheels assumes our datasource name will be the folder name our application resides in. To override the Wheels datasource name convention, m</font>odify /config/settings.cfm by adding:<br>
+    <br>
+    <div>
+      &lt;cfset set(dataSourceName="litepost") /&gt;
+    </div>
+    <br>
+    <div>
+      In the Wheels debugging section on the Congratulations page, notice what the Default Data Source. Now reload Wheels by adding ?reload=true to the end of the URL or in the Wheels debugging section click [Reload]. Check the Default Data Source now, and y<font style=BACKGROUND-COLOR:#ffffff>ou will see it changed to litepost, what we explicitly told Wheels to use. Next we'll generate some Wheels code.</font><br>
+    </div>
+    <h3>
+      <a id=Getting_Up_and_Running_Quickly_43252594041429915 name=Getting_Up_and_Running_Quickly_43252594041429915></a>Getting Up and Running Quickly With scaffolding
+    </h3>
+    Wheels plugins extend or modify the behavior of Wheels. <font style=BACKGROUND-COLOR:#ffffff>Wheels has many developer built plugins. When creating a Wheels applications, you don't need to use any Wheels plugins but for this guide you will use one. You will use a scaffolding plugin to generate your model, views, and controller. This will create </font><font style=BACKGROUND-COLOR:#ffffff>very basic CRUD (create, read, update, and delete). It was developed by Raul Riera. http://cfwheels.org/user/profile/3 </font>Download the scaffolding plugin from http://cfwheels.org/plugins/listing/9 and place the zip in your plugins folder. Notice, we didn't unzip it, we only placed the zip in the plugins folder under the web root.
+  </div>
+  <br>
+  <div>
+    We will need to do another reload so Wheels recognizes the added plugin.
+  </div>
+  <br>
+  <div id=yk63 style=TEXT-ALIGN:center>
+    <a href=http://docs.google.com/File?id=dc2sb454_514gb3x4thj_b target=_blank><img src="images/dc2sb454_514gb3x4thj_b.jpg" style=HEIGHT:400px;WIDTH:640px></a>
+  </div>
+  <br>
+  <div>
+    Our Default Data Source field shows litepost and the Plugins field now has a Scaffold link present. If you received an incompatible warning, please disregard.&nbsp;&nbsp;&nbsp;We have the scaffolding plugin installed so lets generate some code.<br>
+  </div>
+  <h4>
+    <a id=Creating_the_Model_View_and_Co name=Creating_the_Model_View_and_Co></a>Creating the Model, View, and Controller
+  </h4>
+  Now you have the scaffolding plugin loaded, click on the Scaffold link. Fill in the Object name field with Entry, make sure "Model, View, and Controller" is select for the Type field. Default should be selected for the Template field. Click Generate. The scaffolding plugin will build six files for you. Here is a breakdown:<br>
+  <br>
+  <font style=BACKGROUND-COLOR:#fff2cc>When I did this I got: Could not find the ColdFusion component or interface cfwheels.1.1.1.wheels.Connection.To be fair - it looks like it was my fault since the folder name had 1.1.1 in it. But I just copied the straight zip from the download so it may make sense to warn users.-Raymond Camden 1/26/11 3:41 PM Thanks for your effort on this. I'll fix it up. I originally did this a couple version ago. -Mike Henke 1/31/11 9:07 PM Curious on how to duplicate. Did you unzip the plugin or is Wheels running in a sub folder under your webroot? -Mike Henke 2/1/11 6:03 PM&nbsp;</font>
+</div>
+<br>
+<div>
+  <table border=1 bordercolor=#000000 cellpadding=3 cellspacing=0 id=yu0l width=100%>
+    <tbody>
+    <tr>
+      <td width=50%>
+        <font face="arial, sans-serif"><b>File</b></font>
+      </td>
+      <td width=50%>
+        <font face="arial, sans-serif"><b>Purpose</b></font>
+      </td>
+    </tr>
+    <tr>
+      <td width=50%>
+        <font face="arial, sans-serif">/controllers/Entries.cfc</font>
+      </td>
+      <td width=50%>
+        <font face="arial, sans-serif">The Entries controller</font>
+      </td>
+    </tr>
+    <tr>
+      <td width=50%>
+        <font face="arial, sans-serif">/models/Entry.cfc</font>
+      </td>
+      <td width=50%>
+        <font face="arial, sans-serif">The Entry model<br>
+        </font>
+      </td>
+    </tr>
+    <tr>
+      <td width=50%>
+        <font face="arial, sans-serif">/views/entries/edit.cfm<br>
+        </font>
+      </td>
+      <td width=50%>
+        <font face="arial, sans-serif">A view to edit an existing entry</font>
+      </td>
+    </tr>
+    <tr>
+      <td width=50%>
+        <font face="arial, sans-serif">/views/entries/index.cfm<br>
+        </font>
+      </td>
+      <td width=50%>
+        <font face="arial, sans-serif">A view to list all the entries</font>
+      </td>
+    </tr>
+    <tr>
+      <td width=50%>
+        <font face="arial, sans-serif">/views/entries/new.cfm<br>
+        </font>
+      </td>
+      <td width=50%>
+        <font face="arial, sans-serif">A view to create a new entry</font>
+      </td>
+    </tr>
+    <tr>
+      <td width=50%>
+        <font face="arial, sans-serif">/views/entries/show.cfm<br>
+        </font>
+      </td>
+      <td width=50%>
+        <font face="arial, sans-serif">A view to show a single entry</font>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <br>
+  The scaffolding plugin does generate some duplicate code, so in a subsequent article we will discuss DRYing the scaffold generated code. "Duplication in this case is more important than DRY. These templates are bare-bone CRUD...The temtplates are the exact same as Rails (back then I don't know how they handle scaffolding now). The simpler the better, it is easier to "grasp" them." ~ Raul Riera<br>
+  <br>
+  With our application generated, let's step back and review how Wheels will be handling requests and mapping the request to code along with a couple other concepts.
+</div>
+<h3>
+  <a id=WHEELS_SUBTITLE_58399387449026 name=WHEELS_SUBTITLE_58399387449026></a>Wheels Concepts
+</h3>
+<div>
+  We generated our Blog Entry application but the default page, index.cfm, loads the Wheels Congratulations page. We will modify the default route so when you load the site we go to the Listing entries page. First, I would like to cover some higher level concepts with how Wheel's handles mapping requests to code. We will start with the term Route.
+</div>
+<h4>
+  <a id=Routes_28136930568143725_73973_7329824295475087 name=Routes_28136930568143725_73973_7329824295475087></a><font style=BACKGROUND-COLOR:#ffffff>Routes</font>
+</h4>
+<font style=BACKGROUND-COLOR:#ffffff><font size=2>Routes</font></font><font size=2><font style=BACKGROUND-COLOR:#ffffff>&nbsp;are entries in /</font></font><font size=2><font style=BACKGROUND-COLOR:#ffffff>config/routes.cfm</font></font><font size=2><font style=BACKGROUND-COLOR:#ffffff>&nbsp;telling Wheels how to match incoming&nbsp;</font></font><span class=caps style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px><font size=2><font style=BACKGROUND-COLOR:#ffffff>HTTP&nbsp;</font></font></span><font size=2><font style=BACKGROUND-COLOR:#ffffff>requests to our application's code. R</font></font><font size=2><font style=BACKGROUND-COLOR:#ffffff>outes help create custom URLs if you want to break the general Wheels URL convention.</font></font><br>
+<h4>
+  <a id=Incoming_Request_5827125869691 name=Incoming_Request_5827125869691></a><font size=2>Incoming Request</font>
+</h4>
+<div>
+  <font style=BACKGROUND-COLOR:#ffffff><font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#ffffff>Wheels has three types of incoming requests depending on how your URL&nbsp;<font size=2>rewriting&nbsp;</font>web server is setup:</font></font></font></font></font>
+</div>
+<font size=2><strike><br>
+</strike></font>
+<ul>
+  <li>
+    <font style=BACKGROUND-COLOR:#ffffff><font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#ffffff>On - http://localhost/[controller]/[action]/[key]<br>
+    </font></font></font></font></font>
+  </li>
+  <li>
+    <font style=BACKGROUND-COLOR:#ffffff><font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#ffffff>Partial- http://localhost/index.cfm/</font><font size=2><font style=BACKGROUND-COLOR:#ffffff>[controller]</font></font><font style=BACKGROUND-COLOR:#ffffff>/</font><font size=2><font style=BACKGROUND-COLOR:#ffffff>[action]</font></font><font style=BACKGROUND-COLOR:#ffffff>/</font><font size=2><font style=BACKGROUND-COLOR:#ffffff>[key]</font></font></font></font></font></font>
+  </li>
+  <li>
+    <font style=BACKGROUND-COLOR:#ffffff><font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#ffffff>Off - http://localhost/index.cfm?controller=</font><font size=2><font style=BACKGROUND-COLOR:#ffffff>[controller]</font></font><font style=BACKGROUND-COLOR:#ffffff>&amp;action=</font><font size=2><font style=BACKGROUND-COLOR:#ffffff>[action]</font></font><font style=BACKGROUND-COLOR:#ffffff>&amp;key=</font><font size=2><font style=BACKGROUND-COLOR:#ffffff>[key]</font></font></font></font></font></font>
+  </li>
+</ul>
+<font size=2><br>
+</font>
+<div>
+  <font size=2>As you see Wheels incoming requests follow a URL convention.</font>
+</div>
+<h4>
+  <a id=URL_Convention_587182150222361_326229192530205 name=URL_Convention_587182150222361_326229192530205></a><font size=2><font style=BACKGROUND-COLOR:#ffffff>URL Convention</font></font>
+</h4>
+<div>
+  <font size=2><font style=BACKGROUND-COLOR:#ffffff><font size=2>Wheels has a URL convention like other frameworks.&nbsp;<font size=2>Frameworks usually help map the HTTP request to the code.&nbsp;</font></font>The Wheels URL convention is to take the request and match it to the /[controller]/[action]/[key] pattern. Again the [controller] accepts input and decides what to get, do, and display. The [action]&nbsp;<font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2>is a term for a method or function in the controller. The URLl parameters are placed in the params structure.</font></font></font></font></font>
+</div>
+<p>
+</p>
+<h4>
+  <a id=Params_URL_Convention_53485761_7182909652480026 name=Params_URL_Convention_53485761_7182909652480026></a>Params
+</h4>
+<div>
+  <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>You will encounter the params structure in the next section when we review the generated code.&nbsp; The params structure is an important variable in Wheels. Params combines the URL and FORM scope. You can access params in the controller and views.</font></font><br>
+  </font></font></font></font></font><font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><br>
+  "The params variable is thread safe because it is created by a dispatcher request. When the dispatcher creates the controller to handle the request, it initializes the controller by passing in the params variables. If you look at the $request() method in the /wheels/dispatch/request.cfm at this line:&nbsp;<br>
+  </font></font></font><font size=2><br>
+  </font>
+  <div>
+    <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2>loc.controller = $controller(loc.params.controller);</font></font></font>
+  </div>
+  <div>
+    <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2>$createControllerObject(loc.params);&nbsp;</font></font></font>
+  </div>
+  <font size=2><br>
+  </font>
+  <div>
+    <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2>That's the part where the params get passed in." ~ Tony Petruzzi, Wheels Core Team member http://cfwheels.org/user/profile/5</font></font></font>
+  </div>
+</div>
+<font size=2><br>
+</font>
+<div>
+  <font size=2>The last three concepts have to do with built in Wheels functions.</font>
+</div>
+<h4>
+  <a id=Wheels_Form_Helpers_6161805656 name=Wheels_Form_Helpers_6161805656></a>Wheels Form Helpers
+</h4>
+You have seen Wheels has many form helpers to make creating forms easier. Wheels form conventions will help you spend less time writing repetitive markup to display forms and error messages. Wheels will tie your forms together with your model elegantly with the markup built in a consistent manner.
+<h4>
+  <a id=Wheels_Flash_8689652008470148_ name=Wheels_Flash_8689652008470148_></a>Wheels Flash
+</h4>
+<div>
+  Wheels flash is not Adobe Flash as you may have thought. Wheels flash is a structure added to the SESSION scope and cleared on the end of the next request. It is used to store messages or variables from one request to another. It is mainly used for redirects but can be used during rendering a page.&nbsp;
+</div>
+<h4>
+  <a id=Using_set_38284409581683576_55_3849435847678804 name=Using_set_38284409581683576_55_3849435847678804></a><font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff>Using set()</font></font></font></font></font>
+</h4>
+<div>
+  <font size=2>Set is used for global settings before <font size=2>for setting our datasource. We&nbsp;</font>will use set() for setting our application's home page route. Set() can also be used for setting defaults on functions. We'll show an example of this when we style our user interface.</font>
+</div>
+<h3>
+  <a id=Setting_the_Application_Home_P_6355197688306142 name=Setting_the_Application_Home_P_6355197688306142></a>Setting the Application Home Page
+</h3>
+We covered Wheels concepts to better understand what we are doing when we change the default route for our Wheels application.<br>
+<br>
+<div>
+  In /config/routes.cfm, replace the catch all route with this:
+</div>
+<div>
+  <br>
+  &lt;cfset addRoute(name="home", pattern="", controller="Entries", action="index")&gt;
+  <div>
+    <font size=2><br>
+    </font>
+    <div>
+      <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2>addRoute()&nbsp;<font style=BACKGROUND-COLOR:#ffffff>adds a new route</font>&nbsp;to your Wheels application.&nbsp;<font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff>You are telling Wheels to name the new route home. For any URL request matching this route's&nbsp;<font size=2>pattern, the request will be sent to the</font><font size=2>&nbsp;index action of&nbsp;</font>the entries controller.</font></font></font></font></font>
+    </div>
+    <font size=2><br>
+    </font>
+    <div>
+      <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2>Refresh your page (for me http://localhost) and you should see the Listing entries page. Notice in the Wheels debugging section, the Route field <font size=2>displays&nbsp;</font>home, and the Controller field displays Entries and the Action field displays index.</font></font></font>
+    </div>
+    <h3>
+      <a id=Working_With_Entries_191594275_9379566920449067 name=Working_With_Entries_191594275_9379566920449067></a><font size=3>Creating Entries</font>
+    </h3>
+    <div>
+      Let's start creating some blog entries. You have functioning CRUD created by the scaffolding plugin. Click New entry and you can create a new entry. Please add, edit, view, and delete some entries.&nbsp;
+    </div>
+    <br>
+    <div>
+      <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>When you added, edited, and created entries, notice the URLs Wheels builds? The URL for the edit form may look like one of these three options depending on your URL Rewriting setting.&nbsp;<br>
+      <br>
+      </font></font></font></font></font>
+      <ul>
+        <li>
+          <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>http://localhost/entries/edit/1</font></font></font></font></font></font></font>
+        </li>
+        <li>
+          <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>http://localhost/index.cfm/<font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>entries/edit/1</font></font></font></font></font></font></font></font></font></font></font>
+        </li>
+        <li>
+          <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>http://localhost/index.cfm?controller=entries&amp;action=edit&amp;key=1</font></font></font></font></font>
+        </li>
+      </ul>
+      <font size=2><br>
+      This example, the entries controller is instantiated and the edit action is called. The key parameter from the URL gets put into params.key.&nbsp;</font><font size=2>Then the params.key is used to retrieve the specific record.</font>
+    </div>
+    <font size=2><br>
+    </font>
+    <div>
+      <font size=2><font size=2>You have created a working Wheels application generated by the scaffolding plugin while learning more about Wheels. Next we will review the code the scaffolding plugin generated.</font><br>
+      </font>
+    </div>
+    <h2>
+      <a id=Play_By_Play_for_Wheels_Code_3_017431705370974937 name=Play_By_Play_for_Wheels_Code_3_017431705370974937></a>Reviewing Generated Code
+    </h2>
+    <div>
+      We have installed Wheels and created a simple application for blog entries. This next several sections of the article will show, review, and explain Wheels code generated by the scaffolding plugin. We will look at the Listing, Create, Show, Edit, and Delete functionality.
+    </div>
+    <div>
+      <div>
+        <h3>
+          <a id=Listing_entries_58774731680750_15753370997097627 name=Listing_entries_58774731680750_15753370997097627></a><font size=3>Listing entries</font>
+        </h3>
+        <font size=2>We will start by looking at the functionality listing all the entries. Open /controllers/entries.cfc and look at the index action:</font><br>
+        <br>
+        <div>
+          <font size=2>&lt;cffunction name="index"&gt;</font>
+        </div>
+        <div>
+          <font size=2>&lt;cfset entries = model("Entry").findAll()&gt;</font>
+        </div>
+        <div>
+          <font size=2>&lt;/cffunction&gt;</font>
+        </div>
+        <font size=2><font size=2><br>
+        </font>This code returns all records from the entries table. It uses the built in Wheels ORM. Entry is our table name. model() is a Wheels ORM function and findAll() is a Wheels Model class.</font>
+      </div>
+      <div>
+        <font size=2><br>
+        </font>
+        <div>
+          <font size=2>If you browse to the Listing entries page, you can see listing the entries in work.&nbsp;<font size=2>Wheels makes the VARIABLES scope available from the&nbsp;<font style=BACKGROUND-COLOR:#ffffff>controller's&nbsp;</font>action to the view.</font>&nbsp;The view being displayed&nbsp;<font size=2>corresponds to the action's name</font>.&nbsp;</font>
+        </div>
+        <font size=2><br>
+        </font>
+        <div>
+          <font size=2><font size=2>Notice&nbsp;</font>the view is rendered by convention. The index action didn't have to say render /<font size=2>views</font>/entries/index.cfm.&nbsp;</font>
+        </div>
+        <font size=2><br>
+        </font>
+        <div>
+          <font size=2><font size=2>Here's&nbsp;</font><font size=2>/views/entries/index.cfm</font>:</font>
+        </div>
+        <font size=2><br>
+        </font>
+        <div>
+          <font size=2><font style=BACKGROUND-COLOR:#ffffff>&lt;cfoutput&gt;&lt;p&gt;#linkTo(text="Home", route="home")#&lt;/p&gt;&lt;/cfoutput&gt;</font></font>
+        </div>
+        <font size=2><br>
+        </font>
+        <div>
+          <font size=2>&lt;h1&gt;Listing entries&lt;/h1&gt;</font>
+        </div>
+        <font size=2><br>
+        </font>
+        <div>
+          <font size=2>&lt;cftable query="entries" colHeaders="true" HTMLTable="true"&gt;</font>
+        </div>
+        <div>
+          <font size=2>&lt;cfcol header="Entry I D" text="#entryID#" /&gt;</font>
+        </div>
+        <div>
+          <font size=2>&lt;cfcol header="User I D" text="#userID#" /&gt;</font>
+        </div>
+        <div>
+          <font size=2>&lt;cfcol header="Category I D" text="#categoryID#" /&gt;</font>
+        </div>
+        <div>
+          <font size=2>&lt;cfcol header="Title" text="#title#" /&gt;</font>
+        </div>
+        <div>
+          <font size=2>&lt;cfcol header="Body" text="#body#" /&gt;</font>
+        </div>
+        <div>
+          <font size=2>&lt;cfcol header="Date Created" text="#dateCreated#" /&gt;</font>
+        </div>
+        <div>
+          <font size=2>&lt;cfcol header="Date Last Updated" text="#dateLastUpdated#" /&gt;</font>
+        </div>
+        <div>
+          <font size=2>&lt;cfcol header="" text="#linkTo(text='Show', action='show', key=entryID)#" /&gt;</font>
+        </div>
+        <div>
+          <font size=2>&lt;cfcol header="" text="#linkTo(text='Edit', action='edit', key=entryID)#" /&gt;</font>
+        </div>
+        <div>
+          <font size=2>&lt;cfcol header="" text="#linkTo(text='Delete', action='delete', key=entryID, confirm='Are you sure?')#" /&gt;</font>
+        </div>
+        <div>
+          <font size=2>&lt;/cftable&gt;</font>
+        </div>
+        <font size=2><br>
+        </font>
+        <div>
+          <font size=2>&lt;cfoutput&gt;</font>
+        </div>
+        <div>
+          <font size=2>&lt;p&gt;#linkTo(text="New entry", action="new")#&lt;/p&gt;</font>
+        </div>
+        <div>
+          <font size=2>&lt;/cfoutput&gt;</font>
+        </div>
+        <font size=2><br>
+        </font><font size=2>This view is using the entries variable set in index action of the&nbsp;<font size=2>entries controller</font>. The index view shows the content and some links. The second linkTo() builds a Show link to the show action and passes in a key.&nbsp;<font size=2>It builds this markup &lt;a href="/entries/show/15"&gt;Show&lt;/a&gt;&nbsp;<font size=2>if you have URL Rewriting On</font>.&nbsp;</font>The fourth linkTo() displays Delete, pops a javascript alert to confirm you want to continue, and if yes&nbsp;<font size=2>passes a key to the delete action</font>. The Delete linkTo() builds this HTML and javascript as &lt;a href="/entries/delete/15" onclick="return confirm('Are you sure?');"&gt;.<br>
+        </font>
+        <h3>
+          <a id=Creating_New_Posts_81152781867 name=Creating_New_Posts_81152781867></a><font size=3>Creating New Entry</font>
+        </h3>
+        Creating a new entry consists of two actions. The first is the new action which instantiates an empty entry object. The second action is to create an entry via the create action.&nbsp;
+        <h4>
+          <a id=Part_1_Display_Form_1465236919_11162092885644037 name=Part_1_Display_Form_1465236919_11162092885644037></a><font size=2>Action One, Display New page</font>
+        </h4>
+        <div>
+          &lt;cffunction name="new"&gt;
+        </div>
+        <div>
+          &lt;cfset entry = model("Entry").new()&gt;
+        </div>
+        <div>
+          &lt;/cffunction&gt;
+        </div>
+        <br>
+        <div>
+          The next section we will break down the new entry view. The code may look intimidating. You don't have to use Wheels helper functions but hopefully after the explanation you will want to since helpers do just that - help.
+        </div>
+        <br>
+        The /views/entry/new.cfm displays this empty entry to you:
+      </div>
+      <br>
+      <div>
+        &lt;h1&gt;Create new entry&lt;/h1&gt;
+      </div>
+      <br>
+      <div>
+        &lt;cfoutput&gt;
+      </div>
+      <br>
+      <div>
+        #errorMessagesFor("entry")#
+      </div>
+      <div>
+        #startFormTag(action="create")#
+      </div>
+      <div>
+        #textField(objectName='entry', property='userID', label='User I D')#
+      </div>
+      <div>
+        #textField(objectName='entry', property='categoryID', label='Category I D')#
+      </div>
+      <div>
+        #textField(objectName='entry', property='title', label='Title')#
+      </div>
+      <div>
+        #textField(objectName='entry', property='body', label='Body')#
+      </div>
+      <div>
+        #dateTimeSelect(objectName='entry', property='dateCreated', dateOrder='year,month,day', monthDisplay='abbreviations', label='Date Created')#
+      </div>
+      <div>
+        #dateTimeSelect(objectName='entry', property='dateLastUpdated', dateOrder='year,month,day', monthDisplay='abbreviations', label='Date Last Updated')#
+      </div>
+      <br>
+      <div>
+        #submitTag()#
+      </div>
+      <div>
+        #endFormTag()#
+      </div>
+      <br>
+      <div>
+        #linkTo(text="Return to the listing", action="index")#
+      </div>
+      <div>
+        &lt;/cfoutput&gt;
+      </div>
+      <br>
+      <div>
+        Let's begin with errorMessageFor() in /views/entry/new.cfm. It builds and returns a list containing all the error messages for the Entry model based on your validation in the model.&nbsp;
+      </div>
+      <br>
+      <div>
+        Next is the startFormTag() form helper. It builds the starting form tag and maps it to the create action. The markup created is &lt;form action="/entries/create" method="post"&gt;.<br>
+        <br>
+      </div>
+      <div>
+        The textField() creates a text field populated by the userid property. The markup it creates is:
+      </div>
+      <br>
+      <div>
+        &lt;label for="entry-userID"&gt;User I D
+      </div>
+      <div>
+        &lt;input id="entry-userID" name="entry[userID]" type="text" value="" /&gt;
+      </div>
+      <div>
+        &lt;/label&gt;
+      </div>
+      <br>
+      <div>
+        Wheels form helpers may look a little different then you are use to for creating forms, but hopefully now you understand how they tie your model into your form. Wheels form helpers are there to help you be more productive and produce more consistent markup.
+      </div>
+      <div>
+        <h4>
+          <a id=Part_2_Submit_Form_98523423983_36874440645376305 name=Part_2_Submit_Form_98523423983_36874440645376305></a><font size=2>Action Two, Create New Entry</font>
+        </h4>
+        <div>
+          Finally for the Create new entry, when you click on the submit button, the browser sends the form information to the create action in the entry controller.
+        </div>
+        <br>
+        <div>
+          &lt;cffunction name="create"&gt;
+        </div>
+        <div>
+          &lt;cfset entry = model("Entry").new(params.entry)&gt;
+        </div>
+        <div>
+          &lt;!--- Verify that the entry creates successfully ---&gt;
+        </div>
+        <div>
+          &lt;cfif entry.save()&gt;
+        </div>
+        <div>
+          &lt;cfset flashInsert(success="The entry was created successfully.")&gt;
+        </div>
+        <div>
+          &lt;cfset redirectTo(action="index")&gt;
+        </div>
+        <div>
+          &lt;!--- Otherwise ---&gt;
+        </div>
+        <div>
+          &lt;cfelse&gt;
+        </div>
+        <div>
+          &lt;cfset flashInsert(error="There was an error creating the entry.")&gt;
+        </div>
+        <div>
+          &lt;cfset renderPage(action="new")&gt;
+        </div>
+        <div>
+          &lt;/cfif&gt;
+        </div>
+        <div>
+          &lt;/cffunction&gt;
+        </div>
+        <br>
+        <div>
+          In the create action, first new() creates a new object based on params.entry. The params.entry argument passed into new() is the new form values. The cfif saves the entry object and if successful inserts a Wheels flash message then redirects to the index action. If not successful, a Wheels flash message is inserted then the new view is rendered.
+        </div>
+        <h3>
+          <a id=Showing_an_Individual_Entry_07 name=Showing_an_Individual_Entry_07></a><font size=3>Showing an Individual Entry</font>
+        </h3>
+        <div>
+          When you click on the show link for an entry from the Listings entries page, it calls the show action and passes in a key.
+        </div>
+        <br>
+        Your show entry URL may look similiar to one of these:
+      </div>
+      <br>
+      <ul>
+        <li>
+          <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>http://localhost/entries/show/1</font></font></font></font></font></font></font>
+        </li>
+        <li>
+          <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>http://localhost/index.cfm/<font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>entries/show/1</font></font></font></font></font></font></font></font></font></font></font>
+        </li>
+        <li>
+          <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>http://localhost/index.cfm?controller=entries&amp;show=edit&amp;key=1</font></font></font></font></font>
+        </li>
+      </ul>
+      <br>
+      <div>
+        Here is the show action in /controllers/entries.cfc:
+      </div>
+      <br>
+      <div>
+        &lt;cffunction name="show"&gt;
+      </div>
+      <div>
+        &lt;!--- Find the record ---&gt;
+      </div>
+      <div>
+        &lt;cfset entry = model("Entry").findByKey(params.key)&gt;
+      </div>
+      <div>
+        &lt;!--- Check if the record exists ---&gt;
+      </div>
+      <div>
+        &lt;cfif NOT IsObject(entry)&gt;
+      </div>
+      <div>
+        &lt;cfset flashInsert(error="Entry #params.key# was not found")&gt;
+      </div>
+      <div>
+        &lt;cfset redirectTo(action="index")&gt;
+      </div>
+      <div>
+        &lt;/cfif&gt;
+      </div>
+      <div>
+        &lt;/cffunction&gt;
+      </div>
+      <br>
+      The show action uses findByKey() to query for the record by the params.key. If the entry isn't found, the user is directed the Listing entry page with an message. The entry variable is passed to the /views/entries/show.cfm since it is in the VARIABLES scope. Here is the show view:<br>
+      <br>
+      <div>
+        &lt;h1&gt;Showing entry&lt;/h1&gt;
+      </div>
+      <br>
+      <div>
+        &lt;cfoutput&gt;
+      </div>
+      <br>
+      <div>
+        &lt;p&gt;&lt;span&gt;Entry I D&lt;/span&gt; &lt;br /&gt;
+      </div>
+      <div>
+        #entry.entryID#&lt;/p&gt;
+      </div>
+      <div>
+        &lt;p&gt;&lt;span&gt;User I D&lt;/span&gt; &lt;br /&gt;
+      </div>
+      <div>
+        #entry.userID#&lt;/p&gt;
+      </div>
+      <div>
+        &lt;p&gt;&lt;span&gt;Category I D&lt;/span&gt; &lt;br /&gt;
+      </div>
+      <div>
+        #entry.categoryID#&lt;/p&gt;
+      </div>
+      <div>
+        &lt;p&gt;&lt;span&gt;Title&lt;/span&gt; &lt;br /&gt;
+      </div>
+      <div>
+        #entry.title#&lt;/p&gt;
+      </div>
+      <div>
+        &lt;p&gt;&lt;span&gt;Body&lt;/span&gt; &lt;br /&gt;
+      </div>
+      <div>
+        #entry.body#&lt;/p&gt;
+      </div>
+      <div>
+        &lt;p&gt;&lt;span&gt;Date Created&lt;/span&gt; &lt;br /&gt;
+      </div>
+      <div>
+        #entry.dateCreated#&lt;/p&gt;
+      </div>
+      <div>
+        &lt;p&gt;&lt;span&gt;Date Last Updated&lt;/span&gt; &lt;br /&gt;
+      </div>
+      <div>
+        #entry.dateLastUpdated#&lt;/p&gt;
+      </div>
+      <br>
+      <div>
+        #linkTo(text="Return to the listing", action="index")# | #linkTo(text="Edit this entry", action="edit", key=entry.entryID)#
+      </div>
+      <div>
+        &lt;/cfoutput&gt;
+      </div>
+      <br>
+      This code displays the entry model object created in the show action. The linkTo() form helpers are building two links. The first linkTo() is for going back to the Listings entry page which is the index action. The second linkTo() is for editing the entry. Notice it is passing in the primary key for the entry as a key argument.<br>
+      <h3>
+        <a id=Editing_a_Post_029729640111327 name=Editing_a_Post_029729640111327></a><font size=3>Editing an Entry</font>
+      </h3>
+      <div>
+        Similar to creating a new entry, editing an entry is in two parts. The first is a request to edit with a particular entry key&nbsp;<font style=BACKGROUND-COLOR:#ffffff>and the second part is to update the particular entry.&nbsp;</font>"Edit this entry" link calls the edit action in the entries controller and passes a key to it. Here is the edit action:
+      </div>
+      <br>
+      <div>
+        &lt;cffunction name="edit"&gt;
+      </div>
+      <div>
+        &lt;!--- Find the record ---&gt;
+      </div>
+      <div>
+        &lt;cfset entry = model("Entry").findByKey(params.key)&gt;
+      </div>
+      <div>
+        &lt;!--- Check if the record exists ---&gt;
+      </div>
+      <div>
+        &lt;cfif NOT IsObject(entry)&gt;
+      </div>
+      <div>
+        &lt;cfset flashInsert(error="Entry #params.key# was not found")&gt;
+      </div>
+      <div>
+        &lt;cfset redirectTo(action="index")&gt;
+      </div>
+      <div>
+        &lt;/cfif&gt;
+      </div>
+      <div>
+        &lt;/cffunction&gt;
+      </div>
+      <br>
+      <div>
+        After finding the requested entry, Wheels uses /views/entries/edit.cfm to display the record. If the entry is not found, you will be redirected the the Show entries page which you tested out in the "Customizing Layouts" section to show the Wheels flash message.
+      </div>
+      <br>
+      <div>
+        When submitting the edit form, the update action is called.
+      </div>
+      <br>
+      <div>
+        &lt;cffunction name="update"&gt;
+      </div>
+      <div>
+        &lt;cfset entry = model("Entry").findByKey(params.key)&gt;
+      </div>
+      <div>
+        &lt;!--- Verify that the entry updates successfully ---&gt;
+      </div>
+      <div>
+        &lt;cfif entry.update(params.entry)&gt;
+      </div>
+      <div>
+        &lt;cfset flashInsert(success="The entry was updated successfully.")&gt;
+      </div>
+      <div>
+        &lt;cfset redirectTo(action="index")&gt;
+      </div>
+      <div>
+        &lt;!--- Otherwise ---&gt;
+      </div>
+      <div>
+        &lt;cfelse&gt;
+      </div>
+      <div>
+        &lt;cfset flashInsert(error="There was an error updating the entry.")&gt;
+      </div>
+      <div>
+        &lt;cfset renderPage(action="edit")&gt;
+      </div>
+      <div>
+        &lt;/cfif&gt;
+      </div>
+      <div>
+        &lt;/cffunction&gt;
+      </div>
+      <br>
+      <div>
+        In the update action, the code looks for the specific entry matching the params.key with the FindByKey(). The model object returned represents a record as the entry variable. The cfif is checking if the update is successful. The params.entry argument passed into update() is the edit form values. They are applied during the update method call. If successful, a redirect to the index view occurs. If unsuccessful, you are taken to the edit view.
+      </div>
+      <h3>
+        <a id=Deleting_a_Post_23675539135001 name=Deleting_a_Post_23675539135001></a><font size=3>Deleting an Entry</font>
+      </h3>
+      <div>
+        Finally, clicking a delete link calls the delete action.
+      </div>
+      <br>
+      <div>
+        &lt;cffunction name="delete"&gt;
+      </div>
+      <div>
+        &lt;cfset entry = model("Entry").findByKey(params.key)&gt;
+      </div>
+      <div>
+        &lt;!--- Verify that the entry deletes successfully ---&gt;
+      </div>
+      <div>
+        &lt;cfif entry.delete()&gt;
+      </div>
+      <div>
+        &lt;cfset flashInsert(success="The entry was deleted successfully.")&gt;
+      </div>
+      <div>
+        &lt;cfset redirectTo(action="index")&gt;
+      </div>
+      <div>
+        &lt;!--- Otherwise ---&gt;
+      </div>
+      <div>
+        &lt;cfelse&gt;
+      </div>
+      <div>
+        &lt;cfset flashInsert(error="There was an error deleting the entry.")&gt;
+      </div>
+      <div>
+        &lt;cfset redirectTo(action="index")&gt;
+      </div>
+      <div>
+        &lt;/cfif&gt;
+      </div>
+      <div>
+        &lt;/cffunction&gt;
+      </div>
+      <br>
+      The delete action removes a matching record from the database. If successful, you are directed to the index view with a successful Wheels flash message. If unsuccessful, you are directed to the index view with an error Wheels flash message.
+    </div>
+    <br>
+    <div>
+      <font size=2>Our code review is done. Hopefully you noticed how simple Wheels implements the action and display idea from when you originally learned ColdFusion. Advance Wheels techniques you can start doing more code reuse and start overriding the Wheels conventions while still keeping your code simple and maintainable.</font>
+    </div>
+    <h2>
+      <a id=Working_with_Wheels_1342179297_6103607928980188 name=Working_with_Wheels_1342179297_6103607928980188></a>Working with Wheels Code
+    </h2>
+    <div>
+      <font style=BACKGROUND-COLOR:#ffff00>introduce each section; flow; builds unto each other;</font><br>
+    </div>
+    <div>
+      <h3>
+        <a id=Wheels_Debugging_Section_86423_7353686704696855 name=Wheels_Debugging_Section_86423_7353686704696855></a><font size=3>Wheels Debugging Section</font>
+      </h3>
+      <font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff>Wheels is about simplicity, so Wheels adds a straightforward Wheels debugging section to your application. It should be located toward the bottom of the Congratulations page. The fields to take note of are the Default Data Source, Active Environment, and Plugins</font><font style=BACKGROUND-COLOR:#ffffff>.</font></font></font>
+    </div>
+    <br>
+    <ul>
+      <li>
+        Default Data Source - Wheels assumes the datasource is the folder name Wheels is located in. In the next section this guide will explain how to override itn.&nbsp;
+      </li>
+    </ul>
+    <br>
+    <ul>
+      <li>
+        Active Environment - Wheels knows your environment based on the /config/environment.cfm. The file contains a simple &lt;cfset set(environment="design")&gt; statement by default. You can change this based on where the code is running. The set() Wheels function is used to configure a global default.&nbsp;
+      </li>
+    </ul>
+    <br>
+    <ul>
+      <li>
+        Plugins - Wheels shows the Plugins field available.
+      </li>
+    </ul>
+    <br>
+    <div id=prrd style=TEXT-ALIGN:left>
+      <a href=http://docs.google.com/File?id=dc2sb454_513htrr7tgx_b target=_blank><img src="images/dc2sb454_513htrr7tgx_b.jpg" style=HEIGHT:400px;WIDTH:640px></a>
+    </div>
+    <br>
+    <br>
+    <font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff>Other helpful Wheels debugging fields are the Route, Controller, and Action. Route shows the route used, which in this case was home.&nbsp;</font></font></font>Remember the controller accepts input, and decides what to get, do, and display. Action&nbsp;<font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2>is a term for a method/function in the controller.</font></font></font>
+    <div>
+      <h3>
+        <a id=Adding_a_Link_1004657729063183 name=Adding_a_Link_1004657729063183></a>Adding a Link
+      </h3>
+      Let's add a link toward the top of your Listing entries page. Open /views/entries/index.cfm and add on the first line: &lt;cfoutput&gt;&lt;p&gt;#linkTo(text="Home", route="home")#&lt;/p&gt;&lt;/cfoutput&gt;
+    </div>
+    <br>
+    <div>
+      linkTo() is a Wheels vie<font size=2>w helper function. The view helper functions are called from the views and build output. Refresh your page and you should see the new Home link. This view helper we added builds a link using the home route. The markup built will be different depending on your URL Rewriting setting. &nbsp;The html generated may look like:&nbsp;</font>
+    </div>
+    <ul>
+      <li>
+        <font size=2>Full URL Rewriting: &lt;p&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/p&gt;&nbsp;</font>
+      </li>
+      <li>
+        <font size=2><font size=2>Partial:&nbsp;</font>&lt;p&gt;&lt;a href="/index.cfm/entries/index"&gt;Home&lt;/a&gt;&lt;/p&gt;&nbsp;</font>
+      </li>
+      <li>
+        <font size=2>URL Rewriting Off:&nbsp;<font size=2>&lt;p&gt;&lt;a href="/index.cfm?controller=entries&amp;action=index"&gt;Home&lt;/a&gt;&lt;/p&gt;</font></font>
+      </li>
+    </ul>
+    <font size=2><br>
+    </font>
+    <div>
+      &nbsp;<font size=2>&nbsp;.&nbsp;</font>
+    </div>
+    <font size=2><br>
+    </font>
+    <div>
+      <font size=2>Compare with the last linkTo() at the bottom of the page:</font>
+    </div>
+    <br>
+    <div>
+      <font size=2>&lt;p&gt;#linkTo(text="New entry", action="new")#&lt;/p&gt;<br>
+      </font>
+    </div>
+    <br>
+    <div>
+      <font size=2>This linkTo() builds a link to the new action. The markup looks like this </font><span class=webkit-html-tag><font size=2>&lt;p&gt;</font></span><span class=webkit-html-tag><font size=2>&lt;a </font><span class=webkit-html-attribute-name><font size=2>href</font></span><font size=2>="</font><font size=2>/entries/new</font><font size=2>"&gt;</font></span><font size=2>New entry</font><span class=webkit-html-tag><font size=2>&lt;/a&gt;</font></span><span class=webkit-html-tag><font size=2>&lt;/p&gt; <font size=2>if you have URL rewriting on</font>.</font></span>
+    </div>
+    <h3>
+      <a id=Styling_and_Customizing_116763_8043865712318992 name=Styling_and_Customizing_116763_8043865712318992></a>Customizing our Application
+    </h3>
+    <div>
+      <font style=BACKGROUND-COLOR:#ffff00>INTRODUCTION</font>
+    </div>
+    <h4>
+      <a id=Layouts_9062361370306462_39814 name=Layouts_9062361370306462_39814></a>Layouts
+    </h4>
+    <div>
+      <font size=2>A Wheels layout is used instead of<font style=BACKGROUND-COLOR:#ffffff>&nbsp;creating individual header and footer files. You use layout templates as a wrapper around your view output. Open /views/layout.cfm and add this below the &lt;body&gt; tag:</font>&nbsp;&lt;cfoutput&gt;#flash("error")#&lt;/cfoutput&gt;</font>
+    </div>
+    <font size=2><br>
+    </font>
+    <div>
+      <font size=2>The flash() functions gets the value of a specific key in the Wheels flash. In the /views/layout.cfm you will also notice the contentForLayout() Wheels helper function. It is used inside this layout file to display the content of a view. Let's test editing a non-existing record and see what happens.</font>
+    </div>
+    <font size=2><br>
+    </font>
+    <div>
+      <font size=2>Depending on your URL rewriting, the URL to test a non-existing entry should be one of these:</font>
+    </div>
+    <font size=2><br>
+    </font>
+    <ul>
+      <li>
+        <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>http://localhost/entries/edit/9999</font></font></font></font></font></font></font>
+      </li>
+      <li>
+        <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>http://localhost/index.cfm/<font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>entries/edit/<font size=2>9999</font></font></font></font></font></font></font></font></font></font></font></font>
+      </li>
+      <li>
+        <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff><font size=2><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>http://localhost/index.cfm?controller=entries&amp;action=edit&amp;key=<font size=2>9999</font></font></font></font></font></font>
+      </li>
+    </ul>
+    <font size=2><br>
+    </font>
+    <div>
+      <font size=2>Unless you were very busy adding entries, this entry should not exist. Wheels will try to find the entry and since it doesn't exist, will redirect you to the Show entries page with the Wheels flash message.</font>
+    </div>
+    <font size=2><br>
+    </font>
+    <div id=e4.0 style=TEXT-ALIGN:left>
+      <img src="images/dc2sb454_520d23jr4cp_b.jpg" style=HEIGHT:123px;WIDTH:209px>
+    </div>
+    <font size=2><br>
+    If you refresh the page, the Wheels flash message will disappear.</font>
+  </div>
+  <font size=2><br>
+  </font>
+  <div>
+    <font size=2>TRANSITION<br>
+    </font>
+    <h4>
+      <a id=Styling_Forms_3027832652442157 name=Styling_Forms_3027832652442157></a>Styling Forms
+    </h4>
+    <div>
+      You may noticed the scaffolding plugin generated views aren't pretty.<font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff>&nbsp;As Raul mentioned about the scaffolding plugin, simpler is better for users to understand what the code is doing. This section will demonstrate overriding a form helpers generate output in one location instead of individually on each form helper.</font></font>
+    </div>
+    <br>
+    <div>
+      <div>
+        <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff>Add to /config/settings.cfml as follows to improve the form look a little:</font></font>
+      </div>
+      <br>
+      <div>
+        <font style=BACKGROUND-COLOR:#ffff00><font style=BACKGROUND-COLOR:#ffffff>&lt;cfset set(functionName="textField", labelPlacement="before", appendToLabel="&lt;br /&gt;", prependToLabel="&lt;div&gt;", append="&lt;/div&gt;")&gt;<br>
+        </font></font>
+      </div>
+      <br>
+      <div>
+        <font size=2><font color=#151515>This code will override the textField() form helper defaults and make ours forms look a little nicer.&nbsp;<font color=#151515><font size=2>The&nbsp;</font><font color=#151515><font size=2>textField() will be discussed more in the "Wheels Form Helper" section.&nbsp;<font color=#151515><font size=2>If you are curious about the arguments passed in, please check out the textField() function documentation.&nbsp;<a href=http://cfwheels.org/docs/function/textField>http://cfwheels.org/docs/function/textField</a>&nbsp;Wheels has excellent documentation.</font></font></font></font></font></font></font>
+      </div>
+      <font size=2><br>
+      </font>
+      <div>
+        <font color=#151515><font size=2><font color=#151515><font size=2>Be sure to reload your Wheels application to see the difference in a form like the Editing entry page. Now the&nbsp;</font></font>markup for textField() will build:</font></font>
+      </div>
+      <font size=2><br>
+      </font>
+      <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+        &lt;div&gt;
+      </p>
+      <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+        &lt;label for="yourInput "&gt;Your Label&lt;/label&gt;&lt;br&gt;
+      </p>
+      <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+        &lt;input id="yourInput" name="yourInput" type="text" value=""&gt;
+      </p>
+      <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+        &lt;/div&gt;
+      </p>
+      <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+        <br>
+      </p>
+      <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+        Before
+      </p>
+      <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+      </p>
+      <div id=yyj4 style=TEXT-ALIGN:center>
+        <img src="images/dc2sb454_516dps965x3_b.jpg" style=HEIGHT:400px;WIDTH:640px>
+      </div>
+      <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+      </p>
+      <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+        <br>
+      </p>
+      <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+        After
+      </p>
+      <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+      </p>
+      <div id=xkft style=TEXT-ALIGN:center>
+        <a href=http://docs.google.com/File?id=dc2sb454_515ch6mtshc_b target=_blank><img src="images/dc2sb454_515ch6mtshc_b.jpg" style=HEIGHT:400px;WIDTH:640px></a>
+      </div>
+      <br>
+      <br>
+      <h3>
+        <a id=The_Model_372594105778262_7448 name=The_Model_372594105778262_7448></a>The Model
+      </h3>
+      <div>
+        The model, /models/Entry.cfc, is currently very simple.&nbsp;
+      </div>
+      <br>
+      <div>
+        &lt;cfcomponent extends="Model" output="false"&gt;
+      </div>
+      <br>
+      <div>
+        &lt;cffunction name="init"&gt;
+      </div>
+      <div>
+        &lt;/cffunction&gt;
+      </div>
+      <br>
+      <div>
+        &lt;/cfcomponent&gt;
+      </div>
+      <br>
+      <div>
+        <font size=2>Models in Wheels use a singular name, and their corresponding table uses</font><font style=BACKGROUND-COLOR:#ffffff>&nbsp;a plural name. This can be overrode with a simple &lt;cfset table("tbl_Entry")&gt; in the init function of the model cfc. With this example, the table name in the database would be tbl_Entry instead of Entries.</font><br>
+      </div>
+      <br>
+      ---------<br>
+      <font size=2><font style=BACKGROUND-COLOR:#ffffff>Side note:</font></font>
+    </div>
+    <div>
+      <font size=2>"Wheels adopts a Rails-style naming conventions for database tables and model files. Think of a database table as a collection of model objects; therefore, it is named with a plural name. Think of a model object as a representation of a single record from the database table; therefore, it is named with a singular word." from http://cfwheels.org/docs/chapter/conventions</font>
+    </div>
+    <div>
+      <font size=2>---------</font>
+    </div>
+    <div>
+      <h4>
+        <a id=Adding_Some_Validation_6270772_9214044988066312 name=Adding_Some_Validation_6270772_9214044988066312></a>Adding Some Validation
+      </h4>
+      <div>
+        Wheels has built in functions to help <font style=BACKGROUND-COLOR:#ffffff>validate </font>data sent to the model. Open /models/Entry.cfc and edit the init function as follows:
+      </div>
+      <br>
+      <div>
+        &lt;cfset validatesPresenceOf("userid,title,body")&gt;
+      </div>
+      <div>
+        &lt;cfset validatesLengthOf(properties="title", minimum=5, message="Please make your [property] 5 characters or more.", allowblank=true)&gt;
+      </div>
+      <br>
+      These changes ensure all entries have a userid, title, and body, and the length of title is at least five characters. Wheels has a variety of methods to enforce data constraints.
+    </div>
+    <br>
+    <div>
+      Notice, you added allowblank=true for validatesLenghtOf(). This helps to stop double error messages for the title property. Now if title is submitted as blank, the form displays "Title can't be blank". If title is less then five characters, the error message displays "Please make your title 5 characters or more". The form doesn't display both error messages since validateLengthOf() allows blanks. [property] will display the title property name in the error message for validatesLengthOf().
+    </div>
+    <br>
+    <div id=n7zo style=TEXT-ALIGN:center>
+      <a href=http://docs.google.com/File?id=dc2sb454_517cqf4wdf9_b target=_blank><img src="images/dc2sb454_517cqf4wdf9_b.jpg" style=HEIGHT:375px;WIDTH:635px></a>
+    </div>
+    <br>
+    <div>
+      You might be wondering how Wheels is displaying the model's error messages. It is actually a errorMessagesFor() Wheels form helper in the view we discussed earlier.
+    </div>
+    <br>
+    <div>
+      <div>
+        On the Edit entry view, the markup built looks like this on an error if you hit our trifecta of validation we created:
+      </div>
+      <br>
+      <div>
+        &lt;ul class="error-messages"&gt;
+      </div>
+      <div>
+        &lt;li&gt;Userid can't be empty&lt;/li&gt;
+      </div>
+      <div>
+        &lt;li&gt;Body can't be empty&lt;/li&gt;
+      </div>
+      <div>
+        &lt;li&gt;Please make your title 5 characters or more.&lt;/li&gt;
+      </div>
+      <div>
+        &lt;/ul&gt;&nbsp;
+      </div>
+      <br>
+      <div>
+        If you leave the userid field blank, put a value in title, and submit the form, the textField() helper actually builds this:
+      </div>
+      <br>
+      &lt;span class="field-with-errors"&gt;
+    </div>
+    <div>
+      &lt;label for="entry-userID"&gt;User I D
+    </div>
+    <div>
+      &lt;input id="entry-userID" name="entry[userID]" type="text" value=""&gt;
+    </div>
+    <div>
+      &lt;/label&gt;
+    </div>
+    <div>
+      &lt;/span&gt;<br>
+      <br>
+    </div>
+    <div>
+      With some simple CSS, you could spruce it up like having a red border around the inputs with a field-with-errors class defined in your css. Also notice the title field is still populated with the value you entered.
+    </div>
+    <h4>
+      <a id=Model_Class_Functions_58876017_7709790087435751 name=Model_Class_Functions_58876017_7709790087435751></a>Model Class Functions
+    </h4>
+    When you create a model in Wheels, classes are created for interacting with the table. Remember each CFC in the models folder represents a table in your database. There are three read model class functions created on a model object in Wheels: findAll(), findByKey(), and findOne().<br>
+    <br>
+    findAll() will return records from the database. The records will be returned as a cfquery result by convention. findByKey() and findOne() returns a record from the database. The record will be returned as an object by convention. As with most Wheels conventions, if you find an extraordinary situation you can override the convention easily.<br>
+    <br>
+    <div>
+      Here is the dump of entries variable from the Listing entries page (/view/entries/index.cfm). The index action uses a findAll() to create the entries variable in /controllers/Entries.cfc. Add &lt;cfdump var="#entries#"&gt;&lt;cfabort&gt; to the file if you want to follow along.&nbsp;
+    </div>
+    <br>
+    <div id=g01u style=TEXT-ALIGN:left>
+      <img src="images/dc2sb454_518hgfhh8gs_b.jpg" style=HEIGHT:185px;WIDTH:636px>
+    </div>
+    <br>
+    Here is the dump of entry variable from the show entry page (/view/entries/show.cfm). The show action uses a findFindBy() to create the entry variable in /controllers/Entries.cfc. The properties/columns are placed in the THIS scope of the entry model object, see the body property in figure XX. Add &lt;cfdump var="#entry#"&gt;&lt;cfabort&gt; to the file if you want to follow along.&nbsp;
+  </div>
+  <br>
+  <div id=xhbq style=TEXT-ALIGN:left>
+    <img src="images/dc2sb454_519f893qsfs_b.jpg" style=HEIGHT:185px;WIDTH:636px>
+  </div>
+  <br>
+  Be sure to remove the cfdump and cfaborts from your code if you added them.<br>
+  <h3>
+    <a id=Wheels_Flash_43804320227354765_9030799588247966 name=Wheels_Flash_43804320227354765_9030799588247966></a><font size=3>NOT SURE WHATS</font>
+  </h3>
+  <div>
+    Open /controllers/Entries.cfc and scan the code for the edit action.
+  </div>
+  <br>
+  <div>
+    &lt;cffunction name="edit"&gt;
+  </div>
+  <div>
+    &lt;!--- Find the record ---&gt;
+  </div>
+  <div>
+    &lt;cfset entry = model("Entry").findByKey(params.key)&gt;
+  </div>
+  <div>
+    &lt;!--- Check if the record exists ---&gt;
+  </div>
+  <div>
+    &lt;cfif NOT IsObject(entry)&gt;
+  </div>
+  <div>
+    &lt;cfset flashInsert(error="Entry #params.key# was not found")&gt;
+  </div>
+  <div>
+    &lt;cfset redirectTo(action="index")&gt;
+  </div>
+  <div>
+    &lt;/cfif&gt;
+  </div>
+  <div>
+    &lt;/cffunction&gt;
+  </div>
+  <div>
+    <br>
+    <font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff><font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>The findByKey() has params.key passed in from the URL to retrieve a specific entry.&nbsp;<font style=BACKGROUND-COLOR:#cfe2f3><font style=BACKGROUND-COLOR:#ffffff>findByKey</font></font>() is smart enough to figure out the entries table's primary key is entryid. It will use the params.key and find the matching primary key record.&nbsp;</font></font></font></font>You can see if the entry variable isn't an object, a Wheels flash message is inserted into the Wheels flash. Then the index view will be redirected. You will see how to display the Wheels flash in the next section.
+  </div>
+  <h2>
+    <a id=What_s_Next_7453313174191862_9_7832523854673071 name=What_s_Next_7453313174191862_9_7832523854673071></a><font size=4><b>What's Next?</b></font>
+  </h2>
+  <div>
+    First congratulations! Please pat yourself on your back, you created your first Wheels application. You can fix it up even more and experiment. Also, you can look at the Litepost sample application since you have the tables setup. Litepost is meant to compare different frameworks using the same code base. Wheels is about community and helping each other so say Hi on the CFWheels Google Group.
+  </div>
+  <br>
+  <div>
+    Wheels Documentation http://cfwheels.org/docs
+  </div>
+  <div>
+    CFWheels Google Group http://groups.google.com/group/cfwheels
+  </div>
+  <div>
+    Wheels Screencasts http://cfwheels.org/screencasts
+  </div>
+  <div>
+    LitePost http://github.com/mhenke/litepost<br>
+  </div>
+  <h2>
+    <a id=License_and_Acknowledgments_70 name=License_and_Acknowledgments_70></a><font size=4>License and Acknowledgments</font>
+  </h2>
+  <font size=2>This work is licensed under a Creative Commons Attribution-Share Alike 3.0 License. http://creativecommons.org/licenses/by-sa/3.0/ This adapted article was originally published in the Fusion Authority Quarterly Update. Any questions or comments regarding this guide can be posted at the CFWheels Google group http://groups.google.com/group/cfwheels</font>
+</div>
+<br></body>
+</html>
